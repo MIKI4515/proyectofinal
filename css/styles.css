@@ -1,0 +1,214 @@
+/* =========================================
+   VARIABLES Y BASE
+   ========================================= */
+:root {
+    --bg-dark: #0b1120;
+    --text-muted: #94a3b8;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Fondo degradado azul oscuro */
+    background: radial-gradient(circle at top center, #1e3a8a 0%, #0f172a 60%, #020617 100%);
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   TIPOGRAFÍA Y UTILIDADES
+   ========================================= */
+h1 { 
+    font-weight: 700; 
+    letter-spacing: -1px; 
+}
+
+.text-light-blue { 
+    color: var(--text-muted); 
+}
+
+.text-success { 
+    color: #4ade80 !important; 
+}
+
+/* Clases extraídas del HTML (antes eran inline styles) */
+.hero-text {
+    max-width: 700px;
+}
+
+.select-auto {
+    width: auto;
+}
+
+/* =========================================
+   COMPONENTES
+   ========================================= */
+
+/* Badge Superior */
+.badge-custom {
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #60a5fa;
+    font-weight: 500;
+    font-size: 0.9rem;
+    backdrop-filter: blur(4px);
+}
+
+/* Efecto Cristal (Glassmorphism) */
+.glass-card {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 41, 59, 0.6);
+}
+
+/* Nuevo/Modificado: Ajuste para la lista de plataformas */
+.list-group-item.bg-transparent.text-white {
+    /* Reducir el padding vertical para juntar los elementos */
+    padding-top: 0.5rem !important; /* Originalmente podría ser 1rem o más */
+    padding-bottom: 0.5rem !important; /* Originalmente podría ser 1rem o más */
+}
+
+.list-group-item.bg-transparent img {
+    /* Reducir la altura del logo para que visualmente esté más cerca del texto */
+    height: 25px !important; 
+    /* El valor original era 35px o 40px */
+}
+
+/* --- NUEVOS ESTILOS PARA PLATAFORMAS EN CUADRÍCULA --- */
+
+/* Contenedor del enlace para remover el subrayado */
+.platform-link {
+    text-decoration: none;
+    display: block; /* Asegura que el enlace ocupe todo el espacio de la columna */
+}
+
+/* Estilo para la tarjeta de la plataforma */
+.platform-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+}
+
+/* Estilo para el logo de la plataforma */
+.platform-logo {
+    height: 40px; /* Tamaño consistente para todos los logos */
+    max-width: 80%; /* Evita que logos muy anchos rompan el layout */
+    object-fit: contain; /* Asegura que el logo se vea completo */
+}
+
+/* Botones */
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
+    transform: scale(1.02);
+}
+
+.btn-outline-light {
+    border-radius: 10px;
+    border-color: rgba(255,255,255,0.15);
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255,255,255,0.05);
+    border-color: white;
+    color: white;
+}
+
+/* Iconos de colores */
+.icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.bg-blue-gradient { background: linear-gradient(135deg, #3b82f6, #2563eb); box-shadow: 0 8px 16px -4px rgba(59, 130, 246, 0.5); }
+.bg-purple-gradient { background: linear-gradient(135deg, #d946ef, #c026d3); box-shadow: 0 8px 16px -4px rgba(217, 70, 239, 0.5); }
+.bg-green-gradient { background: linear-gradient(135deg, #22c55e, #16a34a); box-shadow: 0 8px 16px -4px rgba(34, 197, 94, 0.5); }
+.bg-orange-gradient { background: linear-gradient(135deg, #f97316, #ea580c); box-shadow: 0 8px 16px -4px rgba(249, 115, 22, 0.5); }
+
+/* Contenedor de la gráfica (extraído del HTML) */
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+/* Gradientes adicionales para Chart.js (opcional pero recomendado) */
+.bg-green-gradient-chart {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.bg-purple-gradient-chart {
+    background: linear-gradient(135deg, #a855f7, #7e22ce);
+}
+/* Gradientes auxiliares para gráficas futuras */
+.chart-green {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.chart-purple {
+    background: linear-gradient(135deg, #a855f7, #7e22ce);
+}
+/* Enlaces de las tarjetas de estadísticas */
+.stats-link {
+    text-decoration: none;
+    display: block;
+}
+
+.stats-link:hover .glass-card {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -8px rgba(0,0,0,0.4);
+    transition: 0.25s ease;
+}
+/* ============================== */
+/* NAVBAR FIJA GLASS */
+/* ============================== */
+.glass-nav {
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 2000;
+}
+
+/* Ajustar el contenido para que no quede debajo del header */
+body {
+    padding-top: 80px;
+}
+
+/* Estilo de los links del navbar */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #60a5fa !important;
+    transform: translateY(-2px);
+}

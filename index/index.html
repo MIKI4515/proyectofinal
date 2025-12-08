@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Streaming Analytics 2025</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<!-- ====================== -->
+<!-- HEADER FIJO SUPERIOR -->
+<!-- ====================== -->
+<header id="topNav" class="navbar navbar-dark navbar-expand-lg fixed-top glass-nav px-3">
+    <a class="navbar-brand fw-bold text-white" href="#inicio">Streaming Stats</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="#crecimiento">Crecimiento de Usuarios</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#usuariosTotales">Usuarios Totales</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#horasVistas">Horas Vistas</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#ingresosAnuales">Ingresos Anuales</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container py-5" id="inicio">
+    <header class="text-center mb-5 mt-3">
+        <h1 class="display-4 text-white mb-3">Estadísticas de Streaming</h1>
+        <p class="lead text-light-blue mb-5 mx-auto hero-text">
+            Análisis en tiempo real de las plataformas de streaming más populares del mundo
+        </p>
+    </header>
+
+<!-- ====================== -->
+<!-- SECCIÓN: Botones de Graficas  -->
+<!-- ====================== -->
+ 
+<section class="row g-4 mb-5">
+
+    <!-- Usuarios Totales -->
+    <div class="col-md-6 col-lg-3">
+        <a class="stats-link" href="#usuariosTotales">
+            <div class="card glass-card h-100 p-4 border-0">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div class="icon-box bg-blue-gradient text-white">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <span class="text-success fw-bold">
+                        <i class="fa-solid fa-arrow-trend-up"></i> +12.5%
+                    </span>
+                </div>
+                <h2 class="text-white fw-bold mb-1">2,400M</h2>
+                <p class="text-light-blue small mb-0 fw-semibold">Usuarios Totales</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Horas Vistas -->
+    <div class="col-md-6 col-lg-3">
+        <a class="stats-link" href="#horasVistas">
+            <div class="card glass-card h-100 p-4 border-0">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div class="icon-box bg-purple-gradient text-white">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                    <span class="text-success fw-bold">
+                        <i class="fa-solid fa-arrow-trend-up"></i> +8.3%
+                    </span>
+                </div>
+                <h2 class="text-white fw-bold mb-1">850M</h2>
+                <p class="text-light-blue small mb-0 fw-semibold">Horas Vistas</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Ingresos Anuales -->
+    <div class="col-md-6 col-lg-3">
+        <a class="stats-link" href="#ingresosAnuales">
+            <div class="card glass-card h-100 p-4 border-0">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div class="icon-box bg-green-gradient text-white">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <span class="text-success fw-bold">
+                        <i class="fa-solid fa-arrow-trend-up"></i> +15.7%
+                    </span>
+                </div>
+                <h2 class="text-white fw-bold mb-1">125B</h2>
+                <p class="text-light-blue small mb-0 fw-semibold">Ingresos Anuales</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Crecimiento -->
+    <div class="col-md-6 col-lg-3">
+        <a class="stats-link" href="#crecimiento">
+            <div class="card glass-card h-100 p-4 border-0">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div class="icon-box bg-orange-gradient text-white">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <span class="text-success fw-bold">
+                        <i class="fa-solid fa-arrow-trend-up"></i> +2.1%
+                    </span>
+                </div>
+                <h2 class="text-white fw-bold mb-1">18.5%</h2>
+                <p class="text-light-blue small mb-0 fw-semibold">Crecimiento</p>
+            </div>
+        </a>
+    </div>
+
+</section>
+
+
+<!-- ====================== -->
+<!-- SECCIÓN: Crecimiento de Usuarios -->
+<!-- ====================== -->
+
+    <section class="row" id="crecimiento">
+        <div class="col-12">
+            <div class="card glass-card p-4 p-md-5 border-0 mb-5">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+                    <div>
+                        <h3 class="text-white fw-bold">Crecimiento de Usuarios</h3>
+                        <p class="text-light-blue mb-0">Evolución mensual de las principales plataformas (En porcentaje %)</p>
+                    </div>
+                    <div class="mt-3 mt-md-0">
+                        <select class="form-select bg-dark text-white border-secondary select-auto">
+                            <option>Año 2025</option>
+                            <option>Año 2024</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="usersChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ====================== -->
+<!-- SECCIÓN: Usuarios Totales -->
+<!-- ====================== -->
+
+<section class="row mt-5" id="usuariosTotales">
+    <div class="col-12">
+        <div class="card glass-card p-4 p-md-5 border-0 mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+                <div>
+                    <h3 class="text-white fw-bold">Usuarios Totales</h3>
+                    <p class="text-light-blue mb-0">Comparación mensual de usuarios por plataforma (Millones)</p>
+                </div>
+                <div class="mt-3 mt-md-0">
+                    <select id="totalUsersSelector" class="form-select bg-dark text-white border-secondary select-auto">
+                        <option>Año 2025</option>
+                        <option>Año 2024</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="totalUsersChart"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== -->
+<!-- SECCIÓN: HORAS VISTAS -->
+<!-- ====================== -->
+
+<section class="row mt-5" id="horasVistas">
+    <div class="col-12">
+        <div class="card glass-card p-4 p-md-5 border-0 mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+                <div>
+                    <h3 class="text-white fw-bold">Horas Vistas</h3>
+                    <p class="text-light-blue mb-0">Consumo mensual de contenido por plataforma (Miles)</p>
+                </div>
+                <div class="mt-3 mt-md-0">
+                    <select id="viewHoursSelector" class="form-select bg-dark text-white border-secondary select-auto">
+                        <option>Año 2025</option>
+                        <option>Año 2024</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="viewHoursChart"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====================== -->
+<!-- SECCIÓN: INGRESOS ANUALES -->
+<!-- ====================== -->
+<section class="row mt-5" id="ingresosAnuales">
+    <div class="col-12">
+        <div class="card glass-card p-4 p-md-5 border-0 mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+                <div>
+                    <h3 class="text-white fw-bold">Ingresos Anuales</h3>
+                    <p class="text-light-blue mb-0">Ingresos mensuales generados por cada plataforma (Billones de Dolares)</p>
+                </div>
+                <div class="mt-3 mt-md-0">
+                    <select id="yearRevenueSelector" class="form-select bg-dark text-white border-secondary select-auto">
+                        <option>Año 2025</option>
+                        <option>Año 2024</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="annualRevenueChart"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ====================== -->
+<!-- SECCIÓN: Plataformas de Streaming -->
+<!-- ====================== -->
+
+    <section class="mb-5">
+        <h4 class="text-white mb-4 text-center fw-bold">Plataformas de Streaming</h4>
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <a href="/views/netflix.html" class="platform-link">
+                    <div class="glass-card text-center p-3 platform-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="platform-logo">
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <a href="/views/prime.html" class="platform-link">
+                    <div class="glass-card text-center p-3 platform-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Prime Video Logo" class="platform-logo">
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <a href="/views/disney.html" class="platform-link">
+                    <div class="glass-card text-center p-3 platform-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+ Logo" class="platform-logo">
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <a href="/views/hbo.html" class="platform-link">
+                    <div class="glass-card text-center p-3 platform-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Max_logo.svg/960px-Max_logo.svg.png" alt="Max Logo" class="platform-logo">
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <a href="/views/youtube.html" class="platform-link">
+                    <div class="glass-card text-center p-3 platform-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube Logo" class="platform-logo">
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <a href="/views/twitch.html" class="platform-link">
+                    <div class="glass-card text-center p-3 platform-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Twitch_logo.svg" alt="Twitch Logo" class="platform-logo">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- ====================== -->
+<!-- SCRIPT: Crecimiento de Usuarios -->
+<!-- ====================== -->
+
+<script>
+const ctx = document.getElementById('usersChart').getContext('2d');
+
+// Gradientes (coinciden con tus estilos)
+const gradientRed = ctx.createLinearGradient(0, 0, 0, 400);
+gradientRed.addColorStop(0, 'rgba(239, 68, 68, 0.5)');
+gradientRed.addColorStop(1, 'rgba(239, 68, 68, 0)');
+
+const gradientBlue = ctx.createLinearGradient(0, 0, 0, 400);
+gradientBlue.addColorStop(0, 'rgba(59, 130, 246, 0.5)');
+gradientBlue.addColorStop(1, 'rgba(59, 130, 246, 0)');
+
+const gradientGreen = ctx.createLinearGradient(0, 0, 0, 400);
+gradientGreen.addColorStop(0, 'rgba(34, 197, 94, 0.5)');
+gradientGreen.addColorStop(1, 'rgba(34, 197, 94, 0)');
+
+const gradientPurple = ctx.createLinearGradient(0, 0, 0, 400);
+gradientPurple.addColorStop(0, 'rgba(168, 85, 247, 0.5)');
+gradientPurple.addColorStop(1, 'rgba(168, 85, 247, 0)');
+
+
+// Datos por año
+const yearlyData = {
+    "2025": {
+        netflix: [220, 228, 235, 232, 245, 250, 260, 265, 275, 280, 290, 300],
+        prime:   [180, 185, 195, 200, 210, 215, 225, 230, 240, 245, 255, 265],
+        disney:  [150, 160, 170, 180, 190, 200, 210, 220, 230, 235, 245, 255],
+        hbo:     [110, 112, 120, 125, 128, 130, 140, 145, 150, 155, 160, 170]
+    },
+    "2024": {
+        netflix: [200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 260],
+        prime:   [160, 165, 170, 175, 180, 185, 190, 195, 200, 205, 210, 220],
+        disney:  [120, 125, 130, 140, 150, 155, 160, 165, 170, 175, 185, 195],
+        hbo:     [90,  95,  98, 100, 104, 108, 112, 115, 120, 125, 130, 140]
+    }
+};
+
+
+// Crear gráfica
+const usersChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+        datasets: [
+            {
+                label: 'Netflix',
+                data: yearlyData["2025"].netflix,
+                borderColor: '#ef4444',
+                backgroundColor: gradientRed,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'Prime Video',
+                data: yearlyData["2025"].prime,
+                borderColor: '#3b82f6',
+                backgroundColor: gradientBlue,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'Disney+',
+                data: yearlyData["2025"].disney,
+                borderColor: '#22c55e',
+                backgroundColor: gradientGreen,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'HBO Max',
+                data: yearlyData["2025"].hbo,
+                borderColor: '#a855f7',
+                backgroundColor: gradientPurple,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                labels: { color: '#cbd5e1', font: { size: 13 } },
+                position: 'top',
+                align: 'end'
+            }
+        },
+        scales: {
+            y: {
+                grid: { color: 'rgba(255,255,255,0.05)' },
+                ticks: { color: '#64748b' }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { color: '#64748b' }
+            }
+        }
+    }
+});
+
+// Cambio dinámico del año
+document.querySelector('.select-auto').addEventListener('change', function () {
+    const selectedYear = this.value.includes("2025") ? "2025" : "2024";
+
+    usersChart.data.datasets[0].data = yearlyData[selectedYear].netflix;
+    usersChart.data.datasets[1].data = yearlyData[selectedYear].prime;
+    usersChart.data.datasets[2].data = yearlyData[selectedYear].disney;
+    usersChart.data.datasets[3].data = yearlyData[selectedYear].hbo;
+
+    usersChart.update();
+});
+</script>
+
+<!-- ====================== -->
+<!-- SECCIÓN: Usuarios Totales -->
+<!-- ====================== -->
+
+<script>
+const ctx2 = document.getElementById('totalUsersChart').getContext('2d');
+
+// === Gradientes (los mismos estilos visuales) ===
+const gradientRed2 = ctx2.createLinearGradient(0, 0, 0, 400);
+gradientRed2.addColorStop(0, 'rgba(239, 68, 68, 0.5)');
+gradientRed2.addColorStop(1, 'rgba(239, 68, 68, 0)');
+
+const gradientBlue2 = ctx2.createLinearGradient(0, 0, 0, 400);
+gradientBlue2.addColorStop(0, 'rgba(59, 130, 246, 0.5)');
+gradientBlue2.addColorStop(1, 'rgba(59, 130, 246, 0)');
+
+const gradientGreen2 = ctx2.createLinearGradient(0, 0, 0, 400);
+gradientGreen2.addColorStop(0, 'rgba(34, 197, 94, 0.5)');
+gradientGreen2.addColorStop(1, 'rgba(34, 197, 94, 0)');
+
+const gradientPurple2 = ctx2.createLinearGradient(0, 0, 0, 400);
+gradientPurple2.addColorStop(0, 'rgba(168, 85, 247, 0.5)');
+gradientPurple2.addColorStop(1, 'rgba(168, 85, 247, 0)');
+
+
+// === Datos para usuarios totales ===
+const totalUsersData = {
+    "2025": {
+        netflix: [2300, 2310, 2325, 2330, 2340, 2350, 2360, 2375, 2385, 2390, 2400, 2405],
+        prime:   [310, 315, 320, 322, 325, 330, 335, 340, 345, 350, 355, 360],
+        disney:  [190, 192, 195, 198, 200, 202, 205, 208, 210, 212, 214, 217],
+        hbo:     [95, 96, 97, 97, 98, 99, 100, 101, 102, 102, 103, 104]
+    },
+    "2024": {
+        netflix: [2200, 2210, 2220, 2230, 2240, 2250, 2260, 2270, 2280, 2290, 2300, 2310],
+        prime:   [290, 292, 295, 298, 300, 302, 305, 308, 310, 312, 315, 318],
+        disney:  [170, 172, 174, 176, 178, 180, 182, 184, 185, 187, 188, 190],
+        hbo:     [85, 86, 86, 87, 88, 89, 89, 90, 91, 91, 92, 93]
+    }
+};
+
+
+// === Crear gráfica ===
+const totalUsersChart = new Chart(ctx2, {
+    type: 'line',
+    data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+        datasets: [
+            {
+                label: 'Netflix',
+                data: totalUsersData["2025"].netflix,
+                borderColor: '#ef4444',
+                backgroundColor: gradientRed2,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'Prime Video',
+                data: totalUsersData["2025"].prime,
+                borderColor: '#3b82f6',
+                backgroundColor: gradientBlue2,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'Disney+',
+                data: totalUsersData["2025"].disney,
+                borderColor: '#22c55e',
+                backgroundColor: gradientGreen2,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'HBO Max',
+                data: totalUsersData["2025"].hbo,
+                borderColor: '#a855f7',
+                backgroundColor: gradientPurple2,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                labels: { color: '#cbd5e1', font: { size: 13 } },
+                position: 'top',
+                align: 'end'
+            }
+        },
+        scales: {
+            y: {
+                grid: { color: 'rgba(255,255,255,0.05)' },
+                ticks: { color: '#64748b' }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { color: '#64748b' }
+            }
+        }
+    }
+});
+
+
+// === Selector dinámico ===
+document.getElementById("totalUsersSelector").addEventListener("change", function () {
+    const selectedYear = this.value.includes("2025") ? "2025" : "2024";
+
+    totalUsersChart.data.datasets[0].data = totalUsersData[selectedYear].netflix;
+    totalUsersChart.data.datasets[1].data = totalUsersData[selectedYear].prime;
+    totalUsersChart.data.datasets[2].data = totalUsersData[selectedYear].disney;
+    totalUsersChart.data.datasets[3].data = totalUsersData[selectedYear].hbo;
+
+    totalUsersChart.update();
+});
+</script>
+
+<!-- ====================== -->
+<!-- SECCIÓN: Horas Vistas -->
+<!-- ====================== -->
+
+<script>
+const ctx3 = document.getElementById('viewHoursChart').getContext('2d');
+
+// Gradientes reusados
+const gradientRed3 = ctx3.createLinearGradient(0, 0, 0, 400);
+gradientRed3.addColorStop(0, 'rgba(239, 68, 68, 0.5)');
+gradientRed3.addColorStop(1, 'rgba(239, 68, 68, 0)');
+
+const gradientBlue3 = ctx3.createLinearGradient(0, 0, 0, 400);
+gradientBlue3.addColorStop(0, 'rgba(59, 130, 246, 0.5)');
+gradientBlue3.addColorStop(1, 'rgba(59, 130, 246, 0)');
+
+const gradientGreen3 = ctx3.createLinearGradient(0, 0, 0, 400);
+gradientGreen3.addColorStop(0, 'rgba(34, 197, 94, 0.5)');
+gradientGreen3.addColorStop(1, 'rgba(34, 197, 94, 0)');
+
+const gradientPurple3 = ctx3.createLinearGradient(0, 0, 0, 400);
+gradientPurple3.addColorStop(0, 'rgba(168, 85, 247, 0.5)');
+gradientPurple3.addColorStop(1, 'rgba(168, 85, 247, 0)');
+
+
+// ===========================
+// Datos para horas vistas
+// ===========================
+const hoursViewedData = {
+    "2025": {
+        netflix: [80, 82, 85, 90, 92, 95, 100, 102, 105, 108, 110, 115],
+        prime:   [45, 47, 48, 50, 52, 53, 55, 58, 59, 60, 62, 64],
+        disney:  [38, 40, 41, 43, 45, 46, 48, 49, 50, 52, 53, 55],
+        hbo:     [30, 31, 32, 34, 35, 36, 38, 39, 39, 40, 41, 43]
+    },
+    "2024": {
+        netflix: [75, 76, 78, 80, 82, 83, 85, 87, 89, 92, 94, 96],
+        prime:   [40, 41, 42, 44, 45, 46, 47, 48, 49, 50, 51, 52],
+        disney:  [32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43],
+        hbo:     [25, 26, 27, 28, 29, 29, 30, 31, 31, 32, 33, 34]
+    }
+};
+
+
+// ===========================
+// Crear gráfica
+// ===========================
+const viewHoursChart = new Chart(ctx3, {
+    type: 'line',
+    data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+        datasets: [
+            {
+                label: 'Netflix',
+                data: hoursViewedData["2025"].netflix,
+                borderColor: '#ef4444',
+                backgroundColor: gradientRed3,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'Prime Video',
+                data: hoursViewedData["2025"].prime,
+                borderColor: '#3b82f6',
+                backgroundColor: gradientBlue3,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'Disney+',
+                data: hoursViewedData["2025"].disney,
+                borderColor: '#22c55e',
+                backgroundColor: gradientGreen3,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'HBO Max',
+                data: hoursViewedData["2025"].hbo,
+                borderColor: '#a855f7',
+                backgroundColor: gradientPurple3,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                labels: { color: '#cbd5e1', font: { size: 13 } },
+                position: 'top',
+                align: 'end'
+            }
+        },
+        scales: {
+            y: {
+                grid: { color: 'rgba(255,255,255,0.05)' },
+                ticks: { color: '#64748b' }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { color: '#64748b' }
+            }
+        }
+    }
+});
+
+// ===========================
+// Selector dinámico
+// ===========================
+document.getElementById("viewHoursSelector").addEventListener("change", function () {
+    const selectedYear = this.value.includes("2025") ? "2025" : "2024";
+
+    viewHoursChart.data.datasets[0].data = hoursViewedData[selectedYear].netflix;
+    viewHoursChart.data.datasets[1].data = hoursViewedData[selectedYear].prime;
+    viewHoursChart.data.datasets[2].data = hoursViewedData[selectedYear].disney;
+    viewHoursChart.data.datasets[3].data = hoursViewedData[selectedYear].hbo;
+
+    viewHoursChart.update();
+});
+</script>
+
+
+<!-- ====================== -->
+<!-- SCRIPT: Crecimiento de Usuarios -->
+<!-- ====================== -->
+
+
+<script>
+const ctx4 = document.getElementById('annualRevenueChart').getContext('2d');
+
+// Gradientes
+const gradientRed4 = ctx4.createLinearGradient(0, 0, 0, 400);
+gradientRed4.addColorStop(0, 'rgba(239, 68, 68, 0.5)');
+gradientRed4.addColorStop(1, 'rgba(239, 68, 68, 0)');
+
+const gradientBlue4 = ctx4.createLinearGradient(0, 0, 0, 400);
+gradientBlue4.addColorStop(0, 'rgba(59, 130, 246, 0.5)');
+gradientBlue4.addColorStop(1, 'rgba(59, 130, 246, 0)');
+
+const gradientGreen4 = ctx4.createLinearGradient(0, 0, 0, 400);
+gradientGreen4.addColorStop(0, 'rgba(34, 197, 94, 0.5)');
+gradientGreen4.addColorStop(1, 'rgba(34, 197, 94, 0)');
+
+const gradientPurple4 = ctx4.createLinearGradient(0, 0, 0, 400);
+gradientPurple4.addColorStop(0, 'rgba(168, 85, 247, 0.5)');
+gradientPurple4.addColorStop(1, 'rgba(168, 85, 247, 0)');
+
+
+// ===========================
+// DATOS DE INGRESOS ($ BILLONES)
+// ===========================
+const revenueData = {
+    "2025": {
+        netflix: [11.5, 11.8, 12.0, 12.3, 12.8, 13.0, 13.5, 13.8, 14.0, 14.4, 14.8, 15.2],
+        prime:   [8.2, 8.3, 8.4, 8.6, 8.8, 9.0, 9.1, 9.3, 9.5, 9.7, 9.9, 10.0],
+        disney:  [5.3, 5.4, 5.6, 5.8, 6.0, 6.2, 6.3, 6.5, 6.7, 6.8, 6.9, 7.0],
+        hbo:     [3.8, 3.9, 4.0, 4.2, 4.3, 4.4, 4.6, 4.7, 4.8, 4.9, 5.0, 5.1]
+    },
+    "2024": {
+        netflix: [10.8, 11.0, 11.2, 11.4, 11.6, 11.9, 12.0, 12.3, 12.5, 12.7, 12.9, 13.1],
+        prime:   [7.5, 7.6, 7.7, 7.9, 8.0, 8.1, 8.3, 8.4, 8.6, 8.7, 8.8, 9.0],
+        disney:  [4.8, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9],
+        hbo:     [3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4]
+    }
+};
+
+
+// ===========================
+// CREAR LA GRÁFICA
+// ===========================
+const annualRevenueChart = new Chart(ctx4, {
+    type: 'line',
+    data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+        datasets: [
+            {
+                label: 'Netflix',
+                data: revenueData["2025"].netflix,
+                borderColor: '#ef4444',
+                backgroundColor: gradientRed4,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'Prime Video',
+                data: revenueData["2025"].prime,
+                borderColor: '#3b82f6',
+                backgroundColor: gradientBlue4,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'Disney+',
+                data: revenueData["2025"].disney,
+                borderColor: '#22c55e',
+                backgroundColor: gradientGreen4,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            },
+            {
+                label: 'HBO Max',
+                data: revenueData["2025"].hbo,
+                borderColor: '#a855f7',
+                backgroundColor: gradientPurple4,
+                tension: 0.4,
+                borderWidth: 3,
+                fill: true
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                labels: { color: '#cbd5e1', font: { size: 13 } },
+                position: 'top',
+                align: 'end'
+            }
+        },
+        scales: {
+            y: {
+                grid: { color: 'rgba(255,255,255,0.05)' },
+                ticks: { color: '#64748b' }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { color: '#64748b' }
+            }
+        }
+    }
+});
+
+// ===========================
+// SELECTOR DE AÑO
+// ===========================
+document.getElementById("yearRevenueSelector").addEventListener("change", function () {
+    const selectedYear = this.value.includes("2025") ? "2025" : "2024";
+
+    annualRevenueChart.data.datasets[0].data = revenueData[selectedYear].netflix;
+    annualRevenueChart.data.datasets[1].data = revenueData[selectedYear].prime;
+    annualRevenueChart.data.datasets[2].data = revenueData[selectedYear].disney;
+    annualRevenueChart.data.datasets[3].data = revenueData[selectedYear].hbo;
+
+    annualRevenueChart.update();
+});
+</script>
+
+</body>
+</html>
