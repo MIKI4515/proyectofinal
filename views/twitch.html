@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Dashboard de analíticas de Twitch 2025: Datos de audiencia en vivo, streamers y categorías.">
+    <meta name="description" content="Análisis de Prime Video 2025: Datos de suscripción, inversión en contenido y catálogo.">
     <meta name="author" content="Estudiante UNAM">
-    <meta name="keywords" content="Twitch, Streaming, Live, Analytics, Data, ChartJS">
+    <meta name="keywords" content="Amazon Prime Video, Streaming, Analytics, MGM, Data">
 
-    <title>Twitch Analytics - Streaming Stats</title>
+    <title>Prime Video Analytics - Streaming Stats</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -30,9 +30,9 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link text-white" href="netflix.html">Netflix</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="disney.html">Disney+</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="prime.html">Prime</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="hbo.html">Max</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="youtube.html">Youtube</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="twitch.html">Twitch</a></li>
             </ul>
         </div>
     </header>
@@ -40,10 +40,10 @@
     <div class="container py-5">
         
         <header class="text-center mb-5 mt-5">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Twitch_Glitch_Logo_Purple.svg" alt="Twitch Logo" class="platform-logo" style="width: 160px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video Logo" class="platform-logo">
             
             <p class="lead text-light-blue mb-5 mx-auto hero-text">
-                Twitch es la plataforma de streaming en vivo líder en el mundo, propiedad de Amazon. A diferencia de sus competidores VOD, Twitch se basa en la interacción en tiempo real entre creadores y comunidades. Aunque nació enfocada en videojuegos y Esports, la categoría "Just Chatting" es ahora su segmento más dominante.
+                Amazon Prime Video es un servicio de streaming incluido en la membresía de Amazon Prime. Destaca por tener una de las librerías de películas más extensas del mercado (impulsada por la adquisición de MGM) y una fuerte apuesta por los deportes en vivo.
             </p>
             <a href="../index.html" class="btn btn-outline-light mb-4">
                 <i class="fa-solid fa-arrow-left"></i> Volver al Dashboard Principal
@@ -52,21 +52,21 @@
         
         <section class="row g-4 mb-5">
             <div class="col-md-6 col-lg-4">
-                <div class="card glass-card h-100 p-4 border-0 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Estimación de usuarios únicos diarios">
-                    <h2 class="text-white fw-bold mb-1">35M+</h2>
-                    <p class="text-light-blue small mb-0 fw-semibold">Usuarios Activos Diarios (DAU)</p>
+                <div class="card glass-card h-100 p-4 border-0 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Estimación global de miembros Prime con acceso a video">
+                    <h2 class="text-white fw-bold mb-1">200M+</h2>
+                    <p class="text-light-blue small mb-0 fw-semibold">Miembros Prime Globales</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card glass-card h-100 p-4 border-0 text-center">
-                    <h2 class="text-white fw-bold mb-1" style="color: #9146FF;">7.2M</h2>
-                    <p class="text-light-blue small mb-0 fw-semibold">Streamers Activos Mensuales</p>
+                    <h2 class="text-white fw-bold mb-1" style="color: #00A8E1;">$1.8B</h2>
+                    <p class="text-light-blue small mb-0 fw-semibold">Ingresos Publicitarios (Est. Anual)</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card glass-card h-100 p-4 border-0 text-center">
-                    <h2 class="text-white fw-bold mb-1">~5.2B</h2>
-                    <p class="text-light-blue small mb-0 fw-semibold">Horas Vistas (Trimestral)</p>
+                    <h2 class="text-white fw-bold mb-1">$10.8B</h2>
+                    <p class="text-light-blue small mb-0 fw-semibold">Ingresos Servicios Suscripción (Q3)</p>
                 </div>
             </div>
         </section>
@@ -74,25 +74,25 @@
         <section class="row mb-5">
             <div class="col-lg-6 mb-4">
                 <div class="card glass-card p-4 border-0 h-100">
-                    <h3 class="text-white fw-bold text-center mb-3">Audiencia por Idioma</h3>
+                    <h3 class="text-white fw-bold text-center mb-3">Composición del Catálogo (Títulos)</h3>
                     <div class="chart-container-half mx-auto">
-                        <canvas id="languageChart"></canvas>
+                        <canvas id="catalogChart"></canvas>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-6 mb-4">
                 <div class="card glass-card p-4 border-0 h-100">
-                    <h3 class="text-white fw-bold text-center mb-3">Categorías Más Vistas (Top 5)</h3>
+                    <h3 class="text-white fw-bold text-center mb-3">Gasto en Contenido (Billones)</h3>
                     <div class="chart-container-half mx-auto">
-                        <canvas id="categoryChart"></canvas>
+                        <canvas id="spendChart"></canvas>
                     </div>
                 </div>
             </div>
 
             <div class="col-12">
                 <div class="card glass-card p-4 p-md-5 border-0">
-                    <h3 class="text-white fw-bold mb-4">Ingresos Estimados (Anual Run Rate - Billones)</h3>
+                    <h3 class="text-white fw-bold mb-4">Ingresos Trimestrales: Servicios de Suscripción</h3>
                     <div class="chart-container">
                         <canvas id="revenueChart"></canvas>
                     </div>
