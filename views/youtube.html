@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Dashboard de analíticas de Twitch 2025: Datos de audiencia en vivo, streamers y categorías.">
+    <meta name="description" content="Dashboard de analíticas de YouTube 2025: Shorts, Ingresos por Ads y métricas de audiencia.">
     <meta name="author" content="Estudiante UNAM">
-    <meta name="keywords" content="Twitch, Streaming, Live, Analytics, Data, ChartJS">
+    <meta name="keywords" content="YouTube, Google, Analytics, Shorts, Streaming, Data">
 
-    <title>Twitch Analytics - Streaming Stats</title>
+    <title>YouTube Analytics - Streaming Stats</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -32,7 +32,7 @@
                 <li class="nav-item"><a class="nav-link text-white" href="disney.html">Disney+</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="prime.html">Prime</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="hbo.html">Max</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="youtube.html">Youtube</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="twitch.html">Twitch</a></li>
             </ul>
         </div>
     </header>
@@ -40,10 +40,10 @@
     <div class="container py-5">
         
         <header class="text-center mb-5 mt-5">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Twitch_Glitch_Logo_Purple.svg" alt="Twitch Logo" class="platform-logo" style="width: 160px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" class="platform-logo" style="width: 200px;">
             
             <p class="lead text-light-blue mb-5 mx-auto hero-text">
-                Twitch es la plataforma de streaming en vivo líder en el mundo, propiedad de Amazon. A diferencia de sus competidores VOD, Twitch se basa en la interacción en tiempo real entre creadores y comunidades. Aunque nació enfocada en videojuegos y Esports, la categoría "Just Chatting" es ahora su segmento más dominante.
+                YouTube es la plataforma de video más grande del mundo y el segundo motor de búsqueda más utilizado. Propiedad de Alphabet (Google), domina tanto el formato de video largo como el corto con "Shorts". Su modelo de negocio es híbrido, combinando ingresos masivos por publicidad (YouTube Ads) con un creciente segmento de suscripción.
             </p>
             <a href="../index.html" class="btn btn-outline-light mb-4">
                 <i class="fa-solid fa-arrow-left"></i> Volver al Dashboard Principal
@@ -52,21 +52,21 @@
         
         <section class="row g-4 mb-5">
             <div class="col-md-6 col-lg-4">
-                <div class="card glass-card h-100 p-4 border-0 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Estimación de usuarios únicos diarios">
-                    <h2 class="text-white fw-bold mb-1">35M+</h2>
-                    <p class="text-light-blue small mb-0 fw-semibold">Usuarios Activos Diarios (DAU)</p>
+                <div class="card glass-card h-100 p-4 border-0 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Usuarios activos mensuales globales">
+                    <h2 class="text-white fw-bold mb-1">2.7B</h2>
+                    <p class="text-light-blue small mb-0 fw-semibold">Usuarios Activos Mensuales</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card glass-card h-100 p-4 border-0 text-center">
-                    <h2 class="text-white fw-bold mb-1" style="color: #9146FF;">7.2M</h2>
-                    <p class="text-light-blue small mb-0 fw-semibold">Streamers Activos Mensuales</p>
+                    <h2 class="text-white fw-bold mb-1" style="color: #ff0000;">100M+</h2>
+                    <p class="text-light-blue small mb-0 fw-semibold">Suscriptores Premium/Music</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card glass-card h-100 p-4 border-0 text-center">
-                    <h2 class="text-white fw-bold mb-1">~5.2B</h2>
-                    <p class="text-light-blue small mb-0 fw-semibold">Horas Vistas (Trimestral)</p>
+                    <h2 class="text-white fw-bold mb-1">$8.92B</h2>
+                    <p class="text-light-blue small mb-0 fw-semibold">Ingresos Pub. Trimestrales (Ads)</p>
                 </div>
             </div>
         </section>
@@ -74,25 +74,25 @@
         <section class="row mb-5">
             <div class="col-lg-6 mb-4">
                 <div class="card glass-card p-4 border-0 h-100">
-                    <h3 class="text-white fw-bold text-center mb-3">Audiencia por Idioma</h3>
+                    <h3 class="text-white fw-bold text-center mb-3">Consumo por Dispositivo</h3>
                     <div class="chart-container-half mx-auto">
-                        <canvas id="languageChart"></canvas>
+                        <canvas id="deviceChart"></canvas>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-6 mb-4">
                 <div class="card glass-card p-4 border-0 h-100">
-                    <h3 class="text-white fw-bold text-center mb-3">Categorías Más Vistas (Top 5)</h3>
+                    <h3 class="text-white fw-bold text-center mb-3">Vistas Diarias de Shorts (Billones)</h3>
                     <div class="chart-container-half mx-auto">
-                        <canvas id="categoryChart"></canvas>
+                        <canvas id="shortsChart"></canvas>
                     </div>
                 </div>
             </div>
 
             <div class="col-12">
                 <div class="card glass-card p-4 p-md-5 border-0">
-                    <h3 class="text-white fw-bold mb-4">Ingresos Estimados (Anual Run Rate - Billones)</h3>
+                    <h3 class="text-white fw-bold mb-4">Ingresos por Publicidad (YouTube Ads)</h3>
                     <div class="chart-container">
                         <canvas id="revenueChart"></canvas>
                     </div>
