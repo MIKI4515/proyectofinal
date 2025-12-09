@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Análisis detallado de Max (HBO) 2025: Suscriptores, ingresos y tendencias.">
+    <meta name="author" content="Estudiante UNAM">
+    <meta name="keywords" content="HBO Max, Streaming, Analytics, Warner Bros, Data">
+
+    <title>Max Analytics - Streaming Stats</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/stylesviews.css">
+</head>
+<body>
+
+    <header id="topNav" class="navbar navbar-dark navbar-expand-lg fixed-top glass-nav px-3">
+        <a class="navbar-brand fw-bold text-white" href="../index/index.html">Estadisticas de Streaming</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="netflix.html">Netflix</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="prime.html">Prime</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="disney.html">Disney+</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="youtube.html">Youtube</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="twitch.html">Twitch</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container py-5">
+        
+        <header class="text-center mb-5 mt-5">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Max_logo.svg" alt="Max Logo" class="platform-logo">
+            
+            <p class="lead text-light-blue mb-5 mx-auto hero-text">
+               HBO Max es la plataforma de streaming global de Warner Bros. Discovery. Combina el prestigio de HBO, el universo de DC, Harry Potter y el cine de Warner Bros., con el contenido de realidad y estilo de vida de Discovery. Es conocida por tener una de las librerías de mayor calidad ("Prestige TV") y un alto ingreso promedio por usuario.
+            </p>
+            <a href="../index/index.html" class="btn btn-outline-light mb-4">
+                <i class="fa-solid fa-arrow-left"></i> Volver al Dashboard Principal 
+            </a>
+        </header>
+        
+        <section class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="card glass-card h-100 p-4 border-0 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Total global Direct-to-Consumer">
+                    <h2 class="text-white fw-bold mb-1">110.5M</h2>
+                    <p class="text-light-blue small mb-0 fw-semibold">Suscriptores Globales (DTC)</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card glass-card h-100 p-4 border-0 text-center">
+                    <h2 class="text-white fw-bold mb-1" style="color: #9d4edd;">+7.2M</h2>
+                    <p class="text-light-blue small mb-0 fw-semibold">Nuevos Suscriptores (Q3)</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card glass-card h-100 p-4 border-0 text-center">
+                    <h2 class="text-white fw-bold mb-1">$7.84</h2>
+                    <p class="text-light-blue small mb-0 fw-semibold">ARPU Global (Ingreso x Usuario)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="row mb-5">
+            <div class="col-lg-6 mb-4">
+                <div class="card glass-card p-4 border-0 h-100">
+                    <h3 class="text-white fw-bold text-center mb-3">Distribución de Suscriptores</h3>
+                    <div class="chart-container-half mx-auto">
+                        <canvas id="regionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                <div class="card glass-card p-4 border-0 h-100">
+                    <h3 class="text-white fw-bold text-center mb-3">Demanda por Marca (Hubs)</h3>
+                    <div class="chart-container-half mx-auto">
+                        <canvas id="contentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card glass-card p-4 p-md-5 border-0">
+                    <h3 class="text-white fw-bold mb-4">Ingresos Segmento Streaming (Billones USD)</h3>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="custom-footer text-center py-4 mt-5">
+        <p class="mb-2 text-light-blue small">
+            &copy; 2025 UNAM Analisador de datos.
+        </p>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#creditosModal">
+            Ver Créditos
+        </button>
+    </footer>
+
+    <div class="modal fade" id="creditosModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title">Créditos del Proyecto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este proyecto fue desarrollado como evaluación final de Programación Web 1.</p>
+                    <hr class="border-secondary">
+                    <h6>Tecnologías:</h6>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>Bootstrap 5</li>
+                        <li>Chart.js</li>
+                    </ul>
+                    <p class="small text-muted mt-3">Diseñado por: Estudiante UNAM</p>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="../js/scriptviews.js"></script>
+
+</body>
+</html>

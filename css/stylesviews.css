@@ -1,0 +1,57 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA LAS VISTAS (VIEWS)
+   ========================================= */
+
+/* Estilos para el logo de la plataforma en el header */
+.platform-logo {
+    width: 180px; 
+    margin-bottom: 25px;
+    display: inline-block; /* Asegura que respete el text-center */
+}
+
+/* Texto introductorio limitado para mejor lectura */
+.hero-text {
+    max-width: 700px;
+}
+
+/* =========================================
+   CONTENEDORES PARA CHART.JS
+   ========================================= */
+/* Esto asegura que las gráficas sean responsivas y tengan el tamaño correcto */
+
+/* Contenedor para gráficas grandes (línea) */
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+/* Contenedor para gráficas medianas (donut/barras) */
+.chart-container-half {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* =========================================
+   ESTILOS DEL FOOTER
+   ========================================= */
+/* Borde superior sutil para separar el footer del contenido */
+.custom-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   MEDIA QUERIES (AJUSTE MÓVIL)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Hacemos las gráficas más bajitas en celulares */
+    .chart-container, .chart-container-half {
+        height: 250px;
+    }
+    
+    /* Logo un poco más pequeño en celulares */
+    .platform-logo {
+        width: 140px;
+    }
+}
